@@ -1,0 +1,8 @@
+## separator as gradient - done
+## hover on social icons gradient from upper left to bottom right - done
+## multi language feature
+## white theme, dark theme
+
+
+## dynamic previous jobs?
+## link to portfolio?
