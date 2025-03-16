@@ -1,8 +1,11 @@
 ## separator as gradient - done
 ## hover on social icons gradient from upper left to bottom right - done
+## portfolio
+  initial layout - done
+  warning modal?: this project is hosted on vercel and uses a backend hosted on render, which can take up to 2 minutes to start replying to requests.
 ## multi language feature
 ## white theme, dark theme
 
 
 ## dynamic previous jobs?
-## link to portfolio?
+## link to portfolio? x
