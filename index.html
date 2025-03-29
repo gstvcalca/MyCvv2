@@ -13,6 +13,7 @@
     <title>gstv</title>
   </head>
   <body>
+    
     <main>
       <div class="header">
         <div class="header_description">
@@ -163,9 +164,32 @@
         </div>
         <div class="portfolio_items">
           <div class="portfolio_item">
-            <a href="https://planner-nine-sooty.vercel.app/"
-              ><img src="icons/planner_thumbnail.png"
-            /></a>
+            <button class="portfolio_btn open_modal_button">
+              <img src="icons/planner_thumbnail.png" />
+            </button>
+            <div class="warning_modal_container">
+              <div class="warning_modal_content">
+                <div class="warning_modal_title">
+                  <h3>Hello There,</h3>
+                  <button class="close_modal_button">X</button>
+                </div>
+                <p>
+                  I really appreciate your curiosity to see the projects I've
+                  developed. This is a friendly reminder that they are hosted on
+                  two free platforms called Vercel (frontend) and Render
+                  (backend). The backend usually takes 2 minutes to start
+                  answering requests for the first time after being idle for a
+                  few minutes. So, please, open the link, wait for two minutes
+                  and refresh the page, then everything should be working
+                  properly. Thank you!
+                </p>
+                <a
+                  href="https://planner-nine-sooty.vercel.app/"
+                  class="go_to_vercel_anchor"
+                  >Go to vercel</a
+                >
+              </div>
+            </div>
             <h3>Plann.er</h3>
             <div class="separator_4"></div>
             <p>
@@ -176,9 +200,32 @@
             </p>
           </div>
           <div class="portfolio_item">
-            <a href="https://computer-force.vercel.app/"
-              ><img src="icons/caputteeno_thumbnail.png"
-            /></a>
+            <button class="portfolio_btn open_modal_button">
+              <img src="icons/caputteeno_thumbnail.png" />
+            </button>
+            <div class="warning_modal_container">
+              <div class="warning_modal_content">
+                <div class="warning_modal_title">
+                  <h3>Hello There,</h3>
+                  <button class="close_modal_button">X</button>
+                </div>
+                <p>
+                  I really appreciate your curiosity to see the projects I've
+                  developed. This is a friendly reminder that they are hosted on
+                  two free platforms called Vercel (frontend) and Render
+                  (backend). The backend usually takes 2 minutes to start
+                  answering requests for the first time after being idle for a
+                  few minutes. So, please, open the link, wait for two minutes
+                  and refresh the page, then everything should be working
+                  properly. Thank you!
+                </p>
+                <a
+                  href="https://computer-force.vercel.app/"
+                  class="go_to_vercel_anchor"
+                  >Go to vercel</a
+                >
+              </div>
+            </div>
             <h3>Caputteeno</h3>
             <div class="separator_4"></div>
             <p>
@@ -190,5 +237,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
