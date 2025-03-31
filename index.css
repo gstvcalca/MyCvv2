@@ -2,22 +2,26 @@
   --text-primary: white;
   --text-secondary: #b3b3b3;
   --bg-primary: #2c2c2c;
+  --bg-secondary: rgb(60, 60, 60);
+  --border-color: white;
   --bg-gradient-start: #464cf6;
   --bg-gradient-end: #77ccf4;
+  --bg-modal: rgba(0, 0, 0, 0.8);
 }
 
 main {
   display: grid;
   position: relative;
   font-family: "Poppins", serif;
-  color: var(--text-primary);
   padding: 32px;
   box-sizing: border-box;
   overflow-x: hidden;
+  color: var(--text-primary);
   background: var(--bg-primary);
 
   grid-template-rows: repeat(4, auto);
   grid-template-areas:
+    "toggle"
     "header"
     "social_media"
     "experience"
@@ -34,6 +38,7 @@ main {
     grid-template-rows: fit-content(100%);
     grid-template-columns: fit-content(100%);
     grid-template-areas:
+      "toggle toggle"
       "header info"
       "experience education"
       "portfolio portfolio"
@@ -43,10 +48,11 @@ main {
 
 body {
   position: relative;
+  margin: 0;
 }
 
 a {
-  color: white;
+  color: var(--border-color);
   font-weight: 600;
 }
 
@@ -58,11 +64,7 @@ a {
   width: min(95%, 325px);
   height: auto;
   margin: auto;
-  background-image: linear-gradient(
-    to right,
-    var(--bg-gradient-start),
-    var(--bg-gradient-end)
-  );
+  background: var(--text-primary);
   border-radius: 12px;
 
   @media (min-width: 1080px) {
@@ -96,7 +98,6 @@ a {
   justify-items: left;
   align-items: center;
   justify-content: start;
-  background: url("icons/bg.png") 50% 75%;
 
   h1 {
     font-weight: 600;
@@ -143,7 +144,6 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("icons/bg.png");
 
   @media (min-width: 1080px) {
     width: fit-content;
@@ -156,7 +156,6 @@ a {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background: url("icons/bg.png") no-repeat center;
 
   h3 {
     text-align: center;
@@ -177,7 +176,6 @@ a {
 .education {
   grid-area: education;
   height: fit-content;
-  background: url("icons/bg.png") no-repeat;
   h3 {
     text-align: center;
     font-weight: 500;
@@ -191,7 +189,7 @@ a {
 }
 
 .button_bg {
-  background-image: linear-gradient(315deg, white, white);
+  background: var(--border-color);
   padding: 1px;
   border-radius: 100%;
   width: fit-content;
@@ -223,6 +221,10 @@ a {
   img {
     transform: scale(1.2);
   }
+
+  svg.icon > path {
+    fill: var(--bg-gradient-end);
+  }
 }
 
 .experience_item {
@@ -240,7 +242,7 @@ a {
   display: flex;
   width: 300px;
   height: 25px;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
   align-items: center;
   border-radius: 24px;
 }
@@ -275,13 +277,13 @@ a {
   width: 90%;
   img {
     width: 30px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--border-color);
     padding: 5px;
   }
 }
 
 .education-item {
-  border-left: 2px solid white;
+  border-left: 2px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -332,7 +334,7 @@ a {
 .separator_2 {
   width: 80%;
   height: 0;
-  border: 1px solid rgb(128, 128, 128);
+  border: 1px solid var(--text-secondary);
   border-top-right-radius: 100%;
 }
 
@@ -350,7 +352,7 @@ a {
 .separator_4 {
   width: 90%;
   height: 0;
-  border: 1px solid rgb(128, 128, 128);
+  border: 1px solid var(--text-secondary);
   border-radius: 100%;
   margin: 0 auto;
 }
@@ -380,15 +382,15 @@ a {
 }
 
 .work_item {
-  border: 1px solid rgb(60, 60, 60);
-  border-left: 1px solid white;
-  background: rgb(60, 60, 60);
+  border: 1px solid var(--text-secondary);
+  border-left: 1px solid var(--border-color);
+  background: var(--text-secondary);
   border-radius: 12px;
   padding: 12px;
   background-image: repeating-linear-gradient(
     -45deg,
-    rgb(60, 60, 60),
-    rgb(60, 60, 60) 2px,
+    var(--bg-secondary),
+    var(--bg-secondary) 2px,
     var(--bg-primary) 2px,
     var(--bg-primary) 5px
   );
@@ -425,8 +427,15 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
   border-radius: 12px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--bg-secondary),
+    var(--bg-secondary) 2px,
+    var(--bg-primary) 2px,
+    var(--bg-primary) 5px
+  );
 
   @media (min-width: 1080px) {
     width: 40%;
@@ -466,32 +475,11 @@ a {
   cursor: pointer;
 }
 
-path {
-  stroke-width: 1px;
-  color: white;
-  stroke: white;
-}
-
-svg {
-  width: 20px;
-  height: 20px;
-}
-
 .location {
   display: flex;
   gap: 8px;
   align-items: center;
   margin-top: 6px;
-}
-
-.gifclass {
-  display: flex;
-  width: 100%;
-  height: 200px;
-  background-color: black;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .warning_modal_content {
@@ -515,7 +503,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.8);
+  background: var(--bg-modal);
   align-items: center;
   justify-content: center;
   border-radius: 12px;
@@ -530,13 +518,13 @@ svg {
   display: flex;
   justify-content: space-between;
   margin: 12px;
-  width:100%;
+  width: 100%;
 }
 
 .close_modal_button {
   background: transparent;
   border: none;
-  color: white;
+  color: var(--border-color);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -547,10 +535,10 @@ svg {
   font-size: 18px;
   padding: 12px 8px;
   font-weight: 500;
-  background-color: rgb(95, 95, 95);
+  background-color: var(--bg-secondary);
   border-radius: 12px;
-  color: white;
-  border: 1px solid white;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   width: 30%;
   cursor: pointer;
   text-align: center;
@@ -558,7 +546,72 @@ svg {
 }
 
 .go_to_vercel_anchor:hover {
-  background-color: white;
-  color: rgb(95, 95, 95);
+  background-color: var(--text-primary);
+  color: var(--bg-secondary);
 }
 
+svg.icon > path {
+  fill: var(--text-primary);
+}
+
+.toggle_div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  grid-area: toggle;
+  position: absolute;
+  top: -50px;
+  right: -40px;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #aaaaaa;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+.slider:before{
+  position: relative;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--text-primary);
+  transition: 0.4s;
+  border-radius: 100%;
+  margin: auto 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.switch input:checked + .slider:before{
+  transform: translateX(25px);
+}
+
+.switch_div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
