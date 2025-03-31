@@ -561,8 +561,11 @@ svg.icon > path {
   width: 100%;
   grid-area: toggle;
   position: absolute;
-  top: -50px;
-  right: -40px;
+
+  @media (min-width: 1080px){
+    top: -50px;
+    right: -40px;
+  }
 }
 
 .switch {
