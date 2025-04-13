@@ -3,7 +3,7 @@
 ## portfolio
   initial layout - done
   warning modal - done
-## multi language feature
+## multi language feature - done
 ## white theme, dark theme - done
 
 
