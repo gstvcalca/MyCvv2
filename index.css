@@ -561,7 +561,7 @@ svg.icon > path {
   width: 100%;
   grid-area: toggle;
   position: absolute;
-
+  gap: 24px;
   @media (min-width: 1080px){
     top: -50px;
     right: -40px;
@@ -617,4 +617,42 @@ svg.icon > path {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.language_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language_slider {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #aaaaaa;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+.language_slider:before{
+  position: relative;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: #012169;
+  border: 1px solid var(--text-primary);
+  transition: 0.4s;
+  border-radius: 100%;
+  margin: auto 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.switch input:checked + .language_slider:before{
+  transform: translateX(25px);
+  background: #009440;
 }

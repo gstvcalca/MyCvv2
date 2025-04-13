@@ -4,7 +4,7 @@
   initial layout - done
   warning modal - done
 ## multi language feature
-## white theme, dark theme
+## white theme, dark theme - done
 
 
 ## dynamic previous jobs?
